@@ -1,1 +1,13 @@
 SRT File Corrector
+
+"./a.exe <infile> <outfile> [<1|2> <from> <to>"]....;
+
+1 : Change Time.
+2 : Change SrtNo.
+
+Example : 
+    .\main.exe Test.srt Output.srt 2 32 1 1 1 "00:02:44"
+
+    <Exec> <iFile> <oFile> [Op> <From> <To>]...
+
+
