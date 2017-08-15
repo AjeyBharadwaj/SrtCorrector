@@ -86,7 +86,7 @@ srt* getNextSrt(ifstream &fp) {
 
     while(1) {
         getline(fp, s1);
-        if (s1.length() == 0) {
+        if (s1.length() < 2) {
             break;
         }
         ptr->srt += "\n" + s1;
@@ -146,6 +146,8 @@ bool correct(int srtNo, string tTime) {
         return false;
     }
 
+    cout << "Here : " << ptr->srtNo << " : " << ptr->srt  << endl;
+
     int t1, t2, diff;
 
     t1 = timeToMsec(ptr->fTime);
@@ -167,6 +169,7 @@ bool correct(int srtNo, string tTime) {
 
 bool correct(int from, int to) {
     srt *ptr = head;
+
     while(ptr) {
         if (ptr->srtNo == from) {
             head = ptr;
