@@ -146,8 +146,6 @@ bool correct(int srtNo, string tTime) {
         return false;
     }
 
-    cout << "Here : " << ptr->srtNo << " : " << ptr->srt  << endl;
-
     int t1, t2, diff;
 
     t1 = timeToMsec(ptr->fTime);
